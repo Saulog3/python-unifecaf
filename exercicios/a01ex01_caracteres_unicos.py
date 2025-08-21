@@ -6,17 +6,17 @@
 #     aabbcc => None
 
 
-def caractaresUnicos(texto):
-    if texto == None: 
+def caractaresUnicos(variavel_externa):
+    if variavel_externa == None: 
         return None
     
-    if len(texto) == 1:
-        return texto
+    if len(variavel_externa) == 1:
+        return variavel_externa
     
     iguais = 0
     unicos = []
-    for i, caracter in enumerate(texto): 
-        if(i + 1 < len(texto)):
+    for i, caracter in enumerate(variavel_externa): 
+        if(i + 1 < len(variavel_externa)):
             if(caracter == texto[i + 1]):
                 iguais += 1
             else:
@@ -32,4 +32,6 @@ def caractaresUnicos(texto):
     return None
 
 texto = 'aabbccaafbbbaaacaa'
+verificado = caractaresUnicos(texto)
 print(caractaresUnicos(texto))
+print(verificado)
