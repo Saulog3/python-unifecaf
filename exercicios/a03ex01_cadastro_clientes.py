@@ -61,7 +61,7 @@ def atualizar_cliente():
     print("Cliente não encontrado.")
 
 while True:
-    print("\nMenu:")
+    print("\nMenu: ")
     print("1 - Inserir cliente")
     print("2 - Buscar cliente")
     print("3 - Remover cliente")
