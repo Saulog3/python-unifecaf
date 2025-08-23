@@ -12,7 +12,7 @@ def buscaTexto(texto, termo):
     idxTermo = 0
     caracteresEncontrados = ''
     for char in texto: 
-        if(char == termo[idxTermo]):
+        if char == termo[idxTermo]:
             caracteresEncontrados += termo[idxTermo]
             idxTermo += 1
             if(caracteresEncontrados == termo):
