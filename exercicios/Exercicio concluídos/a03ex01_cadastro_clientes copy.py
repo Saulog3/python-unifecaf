@@ -22,8 +22,14 @@ def cadastro():
     clientes.append({'nome':nome,'idade': idade})
     
 def remover():
-    retira = input('Cliente a remover: ')
-    clientes.pop(retira['nome', 'idade'])
+    removed_name = input('Cliente a remover: ')
+    for index, cliente in enumerate(clientes):
+        if cliente['nome'].lower() == removed_name.lower():
+            clientes.pop(index)
+            print('Cliente {} removido com sucesso.'.format(removed_name))
+
+
+
     
 
 
