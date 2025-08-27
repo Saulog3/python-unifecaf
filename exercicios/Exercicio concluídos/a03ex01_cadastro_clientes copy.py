@@ -19,7 +19,10 @@ def cadastro():
             print('Duplicado')
             return
 
-    clientes.append({'nome':nome,'idade': idade})
+    clientes.append({
+        'nome': nome,
+        'idade': idade
+        })
     
 def remover():
     removed_name = input('Cliente a remover: ')
@@ -29,9 +32,18 @@ def remover():
             print('Cliente {} removido com sucesso.'.format(removed_name))
 
 
-
+def remove_nome():
+    nome_a_remover = input('Nome a remover: ')
+    for i, cliente in enumerate(clientes):
+        if nome_a_remover == cliente['nome']:
+            clientes.pop(i)
+            print('Cliente ', nome_a_remover, ' removido')
+            
+def busca():
+    name_to_search = input('Buscar nome: ')
     
-
+    if name_to_search == clientes['nome']:
+        
 
 
 
@@ -50,7 +62,7 @@ while opcao != '0':
     elif opcao == '2':
         buscar_cliente()
     elif opcao == '3':
-        remover()
+        remove_nome()
     elif opcao == '4':
         atualizar_cliente()
     elif opcao == '0':
