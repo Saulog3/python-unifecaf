@@ -25,27 +25,26 @@ def cadastro():
         })
     
 def remover():
-    removed_name = input('Cliente a remover: ')
-    for index, cliente in enumerate(clientes):
-        if cliente['nome'].lower() == removed_name.lower():
-            clientes.pop(index)
-            print('Cliente {} removido com sucesso.'.format(removed_name))
-
-
-def remove_nome():
-    nome_a_remover = input('Nome a remover: ')
+    nome = input('Nome a remover: ')
     for i, cliente in enumerate(clientes):
-        if nome_a_remover == cliente['nome']:
+        if nome.lower() == cliente['nome'].lower():
             clientes.pop(i)
-            print('Cliente ', nome_a_remover, ' removido')
-            
+            print(f'Cliente {nome} foi removido.')
+
+
+def listagem():
+    for i, cliente in enumerate(clientes):
+        print(i, cliente['nome'], cliente['idade'])
+
 def busca():
-    name_to_search = input('Buscar nome: ')
-    
-    if name_to_search == clientes['nome']:
-        
-
-
+    nome = input('Buscar: ')
+    for i, cliente in enumerate(clientes):
+        if nome.lower() == cliente['nome'].lower():
+            print(f'''
+                  Nº: {i} 
+                  Nome: {cliente['nome']} 
+                  idade {cliente['idade']}
+                ''')
 
 
 while opcao != '0':
@@ -60,9 +59,11 @@ while opcao != '0':
     if opcao == '1':
         cadastro()
     elif opcao == '2':
-        buscar_cliente()
+        busca()
     elif opcao == '3':
-        remove_nome()
+        remover()
+    elif opcao == '9':
+        listagem()
     elif opcao == '4':
         atualizar_cliente()
     elif opcao == '0':
