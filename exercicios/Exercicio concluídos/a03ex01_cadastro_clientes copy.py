@@ -36,15 +36,34 @@ def listagem():
     for i, cliente in enumerate(clientes):
         print(i, cliente['nome'], cliente['idade'])
 
+
+
 def busca():
-    nome = input('Buscar: ')
-    for i, cliente in enumerate(clientes):
-        if nome.lower() == cliente['nome'].lower():
-            print(f'''
-                  Nº: {i} 
-                  Nome: {cliente['nome']} 
-                  idade {cliente['idade']}
-                ''')
+    
+    choose = None
+    while choose != '0':
+        choose = input('1 - Buscar por ID\n2 - Buscar por Nome\n0 - Voltar\n ')
+        if choose == '1':
+            identificacao = input('Buscar: ')
+            for i, cliente in enumerate(clientes):
+                if identificacao == cliente[i]:
+                    print(f'''
+                        Nº: {i} 
+                        Nome: {cliente['nome']} 
+                        idade {cliente['idade']}
+                        ''')
+                
+        elif choose == '2':
+            nome = input('Buscar: ')
+            for i, cliente in enumerate(clientes):
+                if nome.lower() == cliente['nome'].lower():
+                    print(f'''
+                        Nº: {i} 
+                        Nome: {cliente['nome']} 
+                        idade {cliente['idade']}
+                        ''')
+        else:
+            print('Opção inválida')
 
 
 while opcao != '0':
@@ -65,7 +84,7 @@ while opcao != '0':
     elif opcao == '9':
         listagem()
     elif opcao == '4':
-        atualizar_cliente()
+        atualiza_cliente()
     elif opcao == '0':
         print("Saindo...")
         break
@@ -73,5 +92,3 @@ while opcao != '0':
         print(clientes)
     else:
         print("Opção inválida.")
-
-    
