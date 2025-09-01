@@ -65,30 +65,45 @@ def busca():
         else:
             print('Opção inválida')
 
+def atualiza_cliente():
+    nome = input('Nome do cliente a ser atualizado: ')
+    for i, cliente in enumerate(clientes):
+        if nome.lower() == cliente['nome'].lower():
+            novo_nome = input('Novo nome: ')
+            nova_idade = input('Nova idade: ')
+            clientes[i] = {
+                'nome': novo_nome,
+                'idade': nova_idade
+            }
+            print(f'Cliente {nome} atualizado com sucesso.')
+            return
+    print(f'Cliente {nome} não encontrado.')
+
+operacoes = {
+    '1': cadastro,
+    '2': busca,
+    '3': remover,
+    '4': atualiza_cliente,
+    '5': listagem,
+}
 
 while opcao != '0':
-    print("\nMenu:")
-    print("1 - Inserir cliente")
-    print("2 - Buscar cliente")
-    print("3 - Remover cliente")
-    print("4 - Atualizar cliente")
-    print("0 - Sair")
-    opcao = input("Escolha uma opção: ")
+    print('\n')
+    print('CADASTRO CLIENTES')
+    print('1 - Inserir')
+    print('2 - Buscar por nome ou id')
+    print('3 - Remover')
+    print('4 - Atualizar')
+    print('5 - Listar')
+    print('0 - Sair')
+    print('\n')
 
-    if opcao == '1':
-        cadastro()
-    elif opcao == '2':
-        busca()
-    elif opcao == '3':
-        remover()
-    elif opcao == '9':
-        listagem()
-    elif opcao == '4':
-        atualiza_cliente()
+    opcao = input("Escolha uma opção: ").strip()
+
+    if opcao in operacoes:
+        operacoes[opcao]()
     elif opcao == '0':
-        print("Saindo...")
-        break
-    elif opcao == '7':
-        print(clientes)
+        print("Encerrando aplicacao...")
     else:
-        print("Opção inválida.")
+        print("Opção inexistente")
+
