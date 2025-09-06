@@ -4,22 +4,14 @@
 #   Entrada: [9, 4, 7 , 2, 1]
 #   Saída Esperada: [4, 2]
 
-# def numeros_pares(lista):
-#     pares = []
-#     for i in range(len(lista)):
-#         if lista[i] % 2 == 0:
-#             pares.append(lista[i])
-#     return pares
-
-
-def filtrador_par(lista):
+def numeros_pares(lista):
     pares = []
-    for num in len(termos):
-        if par[num] % 2 == 0:
-            par.append(termos[num])
-    return par
+    for i in range(len(lista)):
+        if lista[i] % 2 == 0:
+            pares.append(lista[i])
+    return pares
+
 
 
 numeros = [9, 4, 7, 2, 1]
-# print(numeros_pares(numeros))
-print(lista_par(numeros))
+print(numeros_pares(numeros))
