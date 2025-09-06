@@ -31,6 +31,9 @@ def buscar_cliente():
                 print(f"Encontrado: [{idx}] Nome: {cliente['nome']}, Idade: {cliente['idade']}")
                 return
         print("Cliente não encontrado.")
+
+
+
     elif escolha == '2':
         try:
             idx = int(input("Índice do cliente: "))
@@ -59,6 +62,7 @@ def atualizar_cliente():
             print("Cliente atualizado.")
             return
     print("Cliente não encontrado.")
+
 
 while True:
     print("\nMenu: ")
