@@ -1,8 +1,7 @@
 # RESOLVIDO !!
 # Dado um arquivo de texto, escreva um programa que conte e exiba 
 # o número total de linhas.
-<<<<<<< HEAD
-=======
+
 
 nome_arquivo = "exemplo.txt"
 
@@ -18,4 +17,4 @@ with open(nome_arquivo, "r", encoding="utf-8") as arquivo:
     for _ in arquivo:   # percorre cada linha do arquivo
         total2 += 1
 print(f"'{nome_arquivo}' possui {total2} linhas.")
->>>>>>> upstream/main
+
