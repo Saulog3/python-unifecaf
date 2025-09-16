@@ -20,3 +20,7 @@
 # print(maior(lista))
         
 # ---------------------------------------#
+# externa = 'saulo ricardo ferreira cunha'
+# for i, ch in enumerate(externa):
+#     print(i, ch, end="")
+   
