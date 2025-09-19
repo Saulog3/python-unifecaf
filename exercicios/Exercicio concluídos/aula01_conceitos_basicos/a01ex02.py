@@ -15,4 +15,5 @@ def buscar_texto(texto: str, valor: str) -> bool:
             return True
     return False
 
-texto = ''
+texto = 'no brasil existem muitos lugares bonitos'
+print(buscar_texto(texto, 'brasil'))
