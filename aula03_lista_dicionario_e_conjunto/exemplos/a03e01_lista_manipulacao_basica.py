@@ -7,7 +7,7 @@ lista1 = lista[::2] # pares
 lista2 = lista.copy()
 lista2[3:7] = [30, 40, 50, 60] # substitui faixa
 
-#lista3 = lista.copy()
+lista3 = lista.copy()
 lista3 = lista3[::-1] # reverso (cópia)
 
 lista4 = lista.copy()
