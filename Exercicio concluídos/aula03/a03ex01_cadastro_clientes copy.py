@@ -8,6 +8,15 @@
 # - Atualização
 # - Listar clientes
 # Importante: ignore nomes iguais, mas caso exista considere apenas um sem muitos critérios.
+import mysql.connector
+
+config = {
+    "host": "localhost",   # ou IP do servidor
+    "user": "root",        # ex: root
+    "password": "amon1010",    # senha do MySQL
+    "database": "loja_escolar" # banco de dados já criado
+}
+
 
 clientes = []
 opcao = None

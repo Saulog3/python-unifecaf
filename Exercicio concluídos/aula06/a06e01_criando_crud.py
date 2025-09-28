@@ -40,27 +40,25 @@ try:
     """)
 
     # Inserindo dados
-    cursor.execute(
-        "INSERT INTO usuarios (nome, email) VALUES (%s, %s)", 
-        ("Ana", "ana@email.com")
-    )
+    # cursor.execute(
+    #     "INSERT INTO usuarios (nome, email) VALUES (%s, %s)", 
+    #     ("Ana", "ana@email.com")
+    # )
     conn.commit()
 
     # Consultando dados
-    cursor.execute(
-        "SELECT * FROM clientes;" \
-        "SELECT * FROM usuarios"
-    )
+    cursor.execute("SELECT * FROM clientes" )
 
-
-    
-
-
-    
-    
     for row in cursor.fetchall():
         print(row)
 
+
+
+    cursor.execute("SELECT * FROM usuarios" )
+    for row in cursor.fetchall():
+        print(row)
+
+        
 except mysql.connector.Error as err:
     print(f"Erro: {err}")
 
