@@ -1,7 +1,8 @@
 test.py
 venv
 .venv
-.python-version
+.pytest_cache
+.pytest_cache/
 .DS_Store
 /extras/json_alunos/*.xlsx
 node_modules
