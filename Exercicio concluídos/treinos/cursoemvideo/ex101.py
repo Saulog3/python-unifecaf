@@ -1,6 +1,12 @@
 
 
 def voto(ano):
+    '''
+    Docstring for voto
+    
+    :param ano: Ano de nascimento
+    
+    '''
     from datetime import date
     hoje = date.today().year
     idadeAtual = hoje - ano

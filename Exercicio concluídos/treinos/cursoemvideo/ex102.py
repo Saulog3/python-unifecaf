@@ -15,10 +15,21 @@ def fatorial (num, show=False):
     return f
 
         
-print(fatorial(8, True))
+# print(fatorial(8, True))
         
 
 
+f = 1
+n = 10
+while n != 0:
+    print(n, end=' ')
+    if n > 1:
+        print(f' x ', end=' ')
+    else:
+        print(f' = ', end=' ')
+    f *= n
+    n -= 1
 
+print(f'{f}')
 
  
