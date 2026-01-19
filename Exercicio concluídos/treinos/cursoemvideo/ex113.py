@@ -2,7 +2,6 @@ def leiaInt(mensagem):
  
 
 
-
     while True:
 
         try:
@@ -10,7 +9,10 @@ def leiaInt(mensagem):
 
         except (ValueError, TypeError):
             print('\033[0;31mErro! Digite um número válido!.\033[m')
-        
+
+        except KeyboardInterrupt:
+            print('Nenhum dado recebido')
+            return 0
            
         except Exception as erro:
             print(f'Erro de {erro.__class__}')
